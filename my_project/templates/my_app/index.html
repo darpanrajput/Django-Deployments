@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+{% load staticfiles %}
+<html>
+		<head>
+					<meta charset="utf-8">
+					<title>Template Django</title>
+					<link rel="stylesheet" type="text/css" href="{% static "css/mystyles.css" %}"/>
+					
+		</head>
+		<body>
+					<h1>Hello This is me!</h1>
+					{{insert_me}}
+					<img src="{% static "images/me.jpg" %}" alt="didn't show"
+					height="300px" width="200px">
+		</body>
+</html> -->
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Djnago Lev 2</title>
+
+<link rel="stylesheet" type="text/css"
+ href="{% static "css/mystyles.css" %}"/>
+ 
+	</head>
+	<body>
+		<h1>Hi welcome to django levevel 2</h1>
+		<h2>Here are your acces record</h2>
+		<div class="django-two">
+			{% if access_record %}
+				<table>
+					<thead>
+						<th>Site Name</th>
+						<th>Date</th>
+					</thead>
+					{% for acc in access_record %}
+						<tr>
+							<td>{{ acc.name }}</td>
+							<td>{{ acc.date }}</td>
+						</tr>
+					{% endfor %}
+				</table>
+			{% else %}
+				<p>NO ACCESS RECORD FOUND</p>
+			{% endif %}
+		</div>
+		
+	</body>
+</html>

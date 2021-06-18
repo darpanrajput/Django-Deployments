@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "second_app/base.html" %}
+	{% block body_block %}
+
+		<h1>This is Index.Html</h1>
+		<p>{{ text|upper }}
+		<p>{{ text|cut:'world' }}
+		{{ number|add:"99" }}</p>
+		<div class="row" >
+			<div class="col-lg-6">
+				<button type="button" class="btn btn-dark btn-md" onclick="http://127.0.0.1:8000/users/">Go to Users</button>
+				<button type="button" class="btn btn-dark btn-md">Go to Form Page</button>
+			</div>
+	
+		</div>
+		{% endblock %}

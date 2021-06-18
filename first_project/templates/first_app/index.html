@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template Django</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static "css/mystyles.css" %}"/>
+	
+</head>
+<body>
+	<h1>Hello This is me!</h1>
+	{{insert_me}}
+	<img src="{% static "images/me.jpg" %}" alt="didn't show"
+
+	height="300px" width="200px">
+
+</body>
+</html>
